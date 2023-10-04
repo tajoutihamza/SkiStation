@@ -1,5 +1,7 @@
 package Hamza.Taoujouti.skistation.entities;
 
+import Hamza.Taoujouti.skistation.entities.enums.Support;
+import Hamza.Taoujouti.skistation.entities.enums.TypeCours;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;

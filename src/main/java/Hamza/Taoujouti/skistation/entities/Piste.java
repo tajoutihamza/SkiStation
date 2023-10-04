@@ -1,5 +1,6 @@
 package Hamza.Taoujouti.skistation.entities;
 
+import Hamza.Taoujouti.skistation.entities.enums.Couleur;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
