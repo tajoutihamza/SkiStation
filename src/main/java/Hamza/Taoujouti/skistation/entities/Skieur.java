@@ -18,6 +18,7 @@ public class Skieur {
     private long id;
     private String nomS;
     private String prenomS;
+    @Temporal(TemporalType.DATE)
     private LocalDate dateNaissance;
     private String ville;
 

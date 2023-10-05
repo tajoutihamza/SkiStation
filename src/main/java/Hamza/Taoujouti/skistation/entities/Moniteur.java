@@ -18,6 +18,7 @@ public class Moniteur {
     private long id;
     private String nomM;
     private String prenomM;
+    @Temporal(TemporalType.DATE)
     private LocalDate dateRecru;
 
     @OneToMany

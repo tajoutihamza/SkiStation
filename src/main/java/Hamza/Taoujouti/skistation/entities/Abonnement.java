@@ -16,9 +16,12 @@ public class Abonnement {
     @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Temporal(TemporalType.DATE)
     private LocalDate dateDebut;
+    @Temporal(TemporalType.DATE)
     private LocalDate dateFin;
     private float prixAbon;
+    @Enumerated(EnumType.STRING)
     private TypeAbonnement typeAbonnement;
 
 

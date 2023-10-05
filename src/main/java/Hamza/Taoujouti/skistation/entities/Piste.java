@@ -17,6 +17,7 @@ public class Piste {
     @Setter(AccessLevel.NONE)
     private long id;
     private String nomPiste;
+    @Enumerated(EnumType.STRING)
     private Couleur couleur;
     private int longeur;
     private int pente;

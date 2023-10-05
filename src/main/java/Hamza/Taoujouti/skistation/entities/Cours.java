@@ -18,7 +18,9 @@ public class Cours {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private int niveau;
+    @Enumerated(EnumType.STRING)
     private TypeCours typeCours;
+    @Enumerated(EnumType.STRING)
     private Support support;
     private float prix;
     private int creneau;
