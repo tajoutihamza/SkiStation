@@ -13,6 +13,7 @@ import java.util.List;
 public class IInscriptionServiceImpl implements IInscriptionService{
 
     private final IInscriptionRepository inscriptionRepo;
+    private final ISkieurRepository skieurRepo;
     @Override
     public Inscription addInscription(Inscription inscription) {
         return inscriptionRepo.save(inscription);
@@ -37,5 +38,12 @@ public class IInscriptionServiceImpl implements IInscriptionService{
     @Override
     public List<Inscription> getAllInscriptions() {
         return inscriptionRepo.findAll();
+    }
+
+    @Override
+    public  Inscription addInscriptionAndAssignToSkier(Inscription inscription, Long idSkier){
+        Skieur skieur = skieurRepo.findById(idSkier);
+        inscription.setSkieur(skieur);
+        return inscriptionRepo.save(inscription);
     }
 }
