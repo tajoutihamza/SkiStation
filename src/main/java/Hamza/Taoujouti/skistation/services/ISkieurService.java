@@ -10,4 +10,5 @@ public interface ISkieurService {
     public Skieur updateSkieur(Skieur skieur);
     public Skieur getSkieur(Long skieurId);
     public List<Skieur> getAllSkieurs();
+    public Skieur assignSkieurToPiste(Long idSkieur, Long idPiste);
 }

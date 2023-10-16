@@ -35,4 +35,8 @@ public class SkieurController {
     public Skieur updateSkieur(@RequestBody Skieur skieur){
         return skieurService.updateSkieur(skieur);
     }
+    @PostMapping("/assignSkieurToPiste/{idSkieur}/{idPiste}")
+    public Skieur assignSkieurToPiste(@PathVariable long idSkieur,@PathVariable long idPiste){
+        return skieurService.assignSkieurToPiste(idSkieur,idPiste);
+    }
 }
