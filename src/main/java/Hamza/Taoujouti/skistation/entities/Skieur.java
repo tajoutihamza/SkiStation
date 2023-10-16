@@ -1,5 +1,6 @@
 package Hamza.Taoujouti.skistation.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -24,8 +25,10 @@ public class Skieur {
 
     @OneToOne(cascade = CascadeType.ALL)
     Abonnement abonnement;
+    @JsonIgnore
     @OneToMany(mappedBy = "skieur")
     Set<Inscription> inscriptions;
+    @JsonIgnore
     @ManyToMany(mappedBy = "skieurs")
     Set<Piste> pistes;
 }

@@ -2,6 +2,7 @@ package Hamza.Taoujouti.skistation.entities;
 
 import Hamza.Taoujouti.skistation.entities.enums.Support;
 import Hamza.Taoujouti.skistation.entities.enums.TypeCours;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class Cours {
     private float prix;
     private int creneau;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "cours")
     Set<Inscription> inscriptions;
 
