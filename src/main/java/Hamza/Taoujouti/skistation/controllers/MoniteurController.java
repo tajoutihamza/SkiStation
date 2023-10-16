@@ -37,5 +37,9 @@ public class MoniteurController {
     public Moniteur updateMoniteur(@RequestBody Moniteur moniteur){
         return moniteurService.updateMoniteur(moniteur);
     }
+    @PostMapping("/addMoniteurAndAssignToCours/{idCourse}")
+    public Moniteur addMoniteurAndAssignToCours(@RequestBody Moniteur moniteur,@PathVariable long idCourse){
+        return moniteurService.addMoniteurAndAssignToCours(moniteur,idCourse);
+    }
 
 }

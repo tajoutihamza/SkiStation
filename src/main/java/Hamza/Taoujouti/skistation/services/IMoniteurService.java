@@ -10,4 +10,5 @@ public interface IMoniteurService {
     public Moniteur updateMoniteur(Moniteur moniteur);
     public Moniteur getMoniteur(Long moniteurId);
     public List<Moniteur> getAllMoniteurs();
+    public Moniteur addMoniteurAndAssignToCours(Moniteur moniteur, Long numCourse);
 }
