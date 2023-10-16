@@ -10,5 +10,6 @@ public interface IInscriptionService {
     public Inscription updateInscription(Inscription inscription);
     public Inscription getInscription(Long inscriptionId);
     public List<Inscription> getAllInscriptions();
-    public Inscription addInscriptionAndAssignToSkier(Inscription inscription, Long idSkier)
+    public Inscription addInscriptionAndAssignToSkier(Inscription inscription, Long idSkier);
+    public Inscription assignInscriptionToCours(Long idInscription, Long idCours);
 }

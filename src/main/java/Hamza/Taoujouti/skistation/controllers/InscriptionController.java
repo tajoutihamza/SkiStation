@@ -37,9 +37,13 @@ public class InscriptionController {
     public Inscription updateInscription(@RequestBody Inscription inscription){
         return inscriptionService.updateInscription(inscription);
     }
-    @PostMapping("{id}")
+    @PostMapping("/addInscriptionAndAssignToSkier/{id}")
     public  Inscription addInscriptionAndAssignToSkier(@RequestBody Inscription inscription,@PathVariable long id){
-        return inscriptionService.addInscriptionAndAssignToSkier(inscription,id)
+        return inscriptionService.addInscriptionAndAssignToSkier(inscription,id);
+    }
+    @PostMapping("/assignInscriptionToCours/{idInscription}/{idCours}")
+    public Inscription assignInscriptionToCours(@PathVariable long idInscription,@PathVariable long idCours) {
+        return inscriptionService.assignInscriptionToCours(idInscription,idCours);
     }
 
 }
