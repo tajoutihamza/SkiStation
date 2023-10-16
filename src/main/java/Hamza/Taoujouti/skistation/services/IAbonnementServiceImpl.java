@@ -1,12 +1,14 @@
 package Hamza.Taoujouti.skistation.services;
 
 import Hamza.Taoujouti.skistation.entities.Abonnement;
+import Hamza.Taoujouti.skistation.entities.enums.TypeAbonnement;
 import Hamza.Taoujouti.skistation.repositories.IAbonnementRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -37,5 +39,9 @@ public class IAbonnementServiceImpl implements IAbonnementService{
     @Override
     public List<Abonnement> getAllAbonnements() {
         return abonnementRepo.findAll();
+    }
+    @Override
+    public Set<Abonnement> getAbonnementByType(TypeAbonnement typeAbonnement) {
+        return abonnementRepo.findAbonnementByTypeAbonnement(typeAbonnement);
     }
 }

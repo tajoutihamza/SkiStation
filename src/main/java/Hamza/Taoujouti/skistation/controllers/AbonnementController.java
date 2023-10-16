@@ -1,12 +1,14 @@
 package Hamza.Taoujouti.skistation.controllers;
 
 import Hamza.Taoujouti.skistation.entities.Abonnement;
+import Hamza.Taoujouti.skistation.entities.enums.TypeAbonnement;
 import Hamza.Taoujouti.skistation.services.IAbonnementService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("abonnement")
@@ -36,6 +38,10 @@ public class AbonnementController {
     @PutMapping("update")
     public Abonnement updateAbonnement(@RequestBody Abonnement abonnement){
         return abonnementService.updateAbonnement(abonnement);
+    }
+    @GetMapping("/getAbonnementByType/{typeAbonnement}")
+    public Set<Abonnement> getAbonnementByType(@PathVariable TypeAbonnement typeAbonnement) {
+        return abonnementService.getAbonnementByType(typeAbonnement);
     }
 
 }
