@@ -29,6 +29,6 @@ public class Skieur {
     @OneToMany(mappedBy = "skieur")
     Set<Inscription> inscriptions;
     @JsonIgnore
-    @ManyToMany(mappedBy = "skieurs")
+    @ManyToMany(mappedBy = "skieurs",fetch = FetchType.EAGER)
     Set<Piste> pistes;
 }
